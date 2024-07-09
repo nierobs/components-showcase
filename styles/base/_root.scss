@@ -1,0 +1,182 @@
+@use "sass:string";
+@use "../abstracts" as var;
+
+@font-face {
+  font-display: swap;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  src: local("Work Sans"), local("WorkSans"), url("../fonts/sans-serif/WorkSans-VariableFont_wght.ttf") format(truetype) tech(variations);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 100 900;
+  src: local("Work Sans"), local("WorkSans"), url("../fonts/sans-serif/WorkSans-Italic-VariableFont_wght.ttf") format(truetype) tech(variations);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inconsolata";
+  font-stretch: 50% 200%;
+  font-style: normal;
+  font-weight: 200 900;
+  src: local("Inconsolata"), url("../fonts/monospace/Inconsolata-VariableFont_wdth,wght.ttf") format(truetype) tech(variations);
+}
+
+*,
+::after,
+::before {
+  background: transparent;
+  border: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var.$brand;
+  color: var.$dark;
+  font: 400 1rem string.unquote("/") 1.618034 var.$sans-serif;
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  background: var.$white;
+
+  section:nth-child(even) {
+    background: var.$light;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+h1,
+.h1 {
+  font: 800 var.$h1 string.unquote("/") 1.27202 var.$sans-serif;
+}
+
+h2,
+.h2 {
+  font: 700 var.$h2 string.unquote("/") 1.27202 var.$sans-serif;
+}
+
+h3,
+.h3 {
+  font: 700 var.$h3 string.unquote("/") 1.618034 var.$sans-serif;
+}
+
+p {
+  margin-bottom: 0.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.small {
+  font-size: var.$font-small;
+}
+
+strong,
+.bold {
+  font-weight: 700;
+}
+
+em,
+.italic {
+  font-style: italic;
+}
+
+.cursive {
+  font-family: var.$cursive;
+}
+
+.monospace {
+  font-family: var.$monospace;
+}
+
+.key {
+  font-stretch: 72%;
+  user-select: all;
+  word-break: break-all;
+}
+
+.letter-spacing {
+  letter-spacing: var.$letter-spacing;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  color: var.$link;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  text-decoration: none;
+  transition: var.$transition;
+
+  &:hover {
+    color: var.$link-hover;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+svg {
+  height: 1rem;
+  width: auto;
+}
+
+img {
+  background: var.$border-color;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.border {
+  border: 1px solid var.$border-color;
+}
+
+.border-radius {
+  border-radius: var.$border-radius;
+}
+
+.border-radius--circle {
+  border-radius: 50%;
+}
+
+@mixin medium {
+  p {
+    margin-bottom: 1rem;
+  }
+}

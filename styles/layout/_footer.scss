@@ -1,0 +1,29 @@
+@use "sass:math";
+@use "../abstracts" as var;
+
+.footer {
+  color: var.$white;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+
+  .footer__icon {
+    fill: var.$white;
+    margin: 0 0.5rem;
+  }
+
+  .footer__link {
+    color: var.$link-white;
+
+    &:hover {
+      color: var.$link-white-hover;
+    }
+  }
+
+  .footer__owner {
+    .footer__link::before {
+      content: ' | '
+    }
+  }
+}
+
+@mixin medium {}

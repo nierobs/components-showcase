@@ -1,0 +1,137 @@
+@use "../abstracts" as var;
+
+%flex {
+  display: flex;
+  gap: var.$gap;
+}
+
+.quotation {
+  @extend %flex;
+  flex-direction: column;
+}
+
+.quotation__cover {
+  position: relative;
+}
+
+.quotation__image {
+  border: 1px solid var.$border-color;
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 144px;
+}
+
+.quotation__body {
+  @extend %flex;
+  background: var.$white;
+  border-radius: var.$border-radius;
+  filter: var.$drop-shadow;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: var.$gap;
+  padding: var.$gap;
+  z-index: 1;
+}
+
+.quotation__arrow,
+.quotation__arrow-shadow {
+  border-bottom: var.$gap solid var.$white;
+  border-left: var.$gap solid transparent;
+  border-right: var.$gap solid transparent;
+  left: 50%;
+  position: absolute;
+  top: calc(100% + var.$gap);
+  transform: translateX(-50%);
+}
+
+.quotation__arrow {
+  z-index: 2;
+}
+
+.quotation__arrow-shadow {
+  filter: var.$drop-shadow;
+}
+
+.quotation__footer {
+  @extend %flex;
+  flex-wrap: wrap;
+  font-size: var.$font-small;
+}
+
+.quotation__author {
+  &::before {
+    content: '— ';
+  }
+}
+
+.quotation__icon {
+  height: var.$font-small;
+}
+
+.quotation__cite {
+  @extend %flex;
+  align-items: center;
+  color: var.$gray;
+  gap: 0.25rem;
+}
+
+@mixin medium {
+  %flex-medium {
+    gap: var.$gap-medium;
+  }
+
+  .quotation {
+    @extend %flex-medium;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .quotation__body {
+    @extend %flex-medium;
+    align-self: stretch;
+    margin-left: var.$gap-medium;
+    margin-top: unset;
+    padding: var.$gap-medium;
+  }
+
+  .quotation__arrow,
+  .quotation__arrow-shadow {
+    border-bottom: var.$gap-medium solid transparent;
+    border-left: unset;
+    border-right: var.$gap-medium solid var.$white;
+    border-top: var.$gap-medium solid transparent;
+    bottom: unset;
+    left: calc(100% + var.$gap-medium);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .quotation__footer {
+    @extend %flex-medium;
+  }
+
+  .quotation__cite {
+    gap: 0.5rem;
+  }
+
+  .quotation--reverse {
+    flex-direction: row-reverse;
+
+    .quotation__body {
+      margin-right: var.$gap-medium;
+    }
+
+    .quotation__arrow,
+    .quotation__arrow-shadow {
+      border-bottom: var.$gap-medium solid transparent;
+      border-left: var.$gap-medium solid var.$white;
+      border-right: unset;
+      border-top: var.$gap-medium solid transparent;
+      bottom: unset;
+      left: unset;
+      right: calc(100% + var.$gap-medium);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

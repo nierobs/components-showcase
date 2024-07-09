@@ -1,0 +1,46 @@
+@use "../abstracts" as var;
+
+%flex {
+  display: flex;
+  gap: var.$gap;
+}
+
+.button {
+  @extend %flex;
+  align-items: center;
+  background: var.$button;
+  border-radius: var.$border-radius;
+  color: var.$white;
+  letter-spacing: var.$letter-spacing;
+  filter: var.$drop-shadow;
+  font-weight: 700;
+  justify-content: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  transition: all 500ms ease-out;
+
+  &:hover {
+    background: var.$button-hover;
+    color: var.$white;
+  }
+
+  &--golden {
+    background: linear-gradient(105deg, var.$golden 16.666667%, lighten(var.$golden, 4%) 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, lighten(var.$golden, 4%) 61.111111%, lighten(var.$golden, 8%) 64.814815%, lighten(var.$golden, 4%) 68.518519%, lighten(var.$golden, 8%) 72.222222%, lighten(var.$golden, 4%) 75.925926%, var.$golden 83.333333%) left / 200%;
+
+    &:hover {
+      background: linear-gradient(105deg, var.$golden 16.666667%, lighten(var.$golden, 4%) 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, lighten(var.$golden, 4%) 61.111111%, lighten(var.$golden, 8%) 64.814815%, lighten(var.$golden, 4%) 68.518519%, lighten(var.$golden, 8%) 72.222222%, lighten(var.$golden, 4%) 75.925926%, var.$golden 83.333333%) right / 200%;
+    }
+  }
+}
+
+@mixin medium {
+  %flex-medium {
+    gap: var.$gap-medium;
+  }
+
+  .button,
+  .button--golden {
+    @extend %flex-medium;
+    padding: 1rem 2rem;
+  }
+}

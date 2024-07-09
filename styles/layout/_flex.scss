@@ -1,0 +1,33 @@
+@use "../abstracts" as var;
+
+.flex {
+  display: flex;
+  gap: var.$gap;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--col {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+@mixin medium {
+  .flex {
+    gap: var.$gap-medium;
+  }
+
+  .flex--medium--row {
+    flex-direction: row;
+  }
+
+  .flex--medium--reverse {
+    flex-direction: row-reverse;
+  }
+}

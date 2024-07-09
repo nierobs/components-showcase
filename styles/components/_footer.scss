@@ -1,0 +1,83 @@
+@use "../abstracts" as var;
+
+%flex {
+  display: flex;
+  gap: var.$gap;
+}
+
+%grid {
+  display: grid;
+  gap: var.$gap;
+}
+
+.footer-b {
+  @extend %flex;
+  flex-direction: column;
+}
+
+.footer-b__main {
+  @extend %grid;
+}
+
+.footer-b__section {
+  @extend %flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-b__title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: var.$letter-spacing;
+}
+
+.footer-b__list {
+  @extend %flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: var.$font-small;
+}
+
+.footer-b__link {
+  @extend %flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.footer-b__footnote {
+  border-top: 1px solid var.$border-color;
+  font-size: var.$font-small;
+  margin-top: var.$gap;
+  padding-top: var.$gap;
+  text-align: center;
+}
+
+@mixin medium {
+  %flex-medium {
+    gap: var.$gap-medium;
+  }
+
+  %grid-medium {
+    gap: var.$gap-medium;
+  }
+
+  .footer-b,
+  .footer-b__section,
+  .footer-b__list {
+    @extend %flex-medium;
+  }
+
+  .footer-b__main {
+    @extend %grid-medium;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+  }
+
+  .footer-b__link {
+    gap: 0.5rem;
+  }
+
+  .footer-b__footnote {
+    margin-top: var.$gap-medium;
+    padding-top: var.$gap-medium;
+  }
+}

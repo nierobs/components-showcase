@@ -1,0 +1,15 @@
+{
+  "name": "html-sass-components",
+  "version": "1.0.0",
+  "description": "**Repository:** [https://github.com/nierobs/html-sass-components](https://github.com/nierobs/html-sass-components)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glightbox": "^3.3.0"
+  }
+}

@@ -1,0 +1,23 @@
+@use "sass:string";
+@use "../abstracts" as var;
+
+.header {
+  color: var.$white;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+
+  .header__link {
+    color: var.$white;
+
+    &:hover {
+      color: var.$white;
+    }
+  }
+
+  .header__icon {
+    height: var.$h3;
+    width: auto;
+  }
+}
+
+@mixin medium {}

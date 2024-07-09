@@ -1,0 +1,18 @@
+$brand: hsl(150, 44%, 24%);
+$dark: hsl(240, 20%, 16%);
+$gray: hsl(240, 20%, 52%);
+$golden: hsl(45, 60%, 44%);
+$light: hsl(240, 20%, 92%);
+$white: hsl(240, 20%, 100%);
+
+$link: hsl(210, 80%, 40%);
+$link-hover: lighten($link, 12%);
+
+$link-white: hsl(240, 20%, 100%);
+$link-white-hover: darken($link-white, 12%);
+
+$button: $brand;
+$button-hover: lighten($button, 12%);
+
+$border-color: hsl(240, 20%, 84%);
+$drop-shadow: drop-shadow(0.125rem 0.353553rem 0.5rem rgba(0, 0, 0, 0.12));

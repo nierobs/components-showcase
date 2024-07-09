@@ -1,0 +1,15 @@
+@use "video";
+@use "button";
+@use "card";
+@use "quotation";
+@use "footer";
+@use "animation";
+
+@mixin medium {
+  @include video.medium;
+  @include button.medium;
+  @include card.medium;
+  @include quotation.medium;
+  @include footer.medium;
+  @include animation.medium;
+}

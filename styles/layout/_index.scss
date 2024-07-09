@@ -1,0 +1,15 @@
+@use "container";
+@use "grid";
+@use "flex";
+@use "header";
+@use "section";
+@use "footer";
+
+@mixin medium {
+  @include container.medium;
+  @include grid.medium;
+  @include flex.medium;
+  @include header.medium;
+  @include section.medium;
+  @include footer.medium;
+}

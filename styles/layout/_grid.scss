@@ -1,0 +1,40 @@
+@use "../abstracts" as var;
+
+.grid {
+  gap: var.$gap;
+  display: grid;
+}
+
+@mixin medium {
+  .grid {
+    gap: var.$gap-medium;
+  }
+
+  .grid--col-2 {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+
+  .grid--col-2--reverse {
+    & > *:first-child {
+      order: 1;
+    }
+  }
+
+  .grid--col-3 {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+  }
+
+  .grid--col-3--reverse {
+    & > *:first-child {
+      order: 2;
+    }
+
+    & > *:last:child {
+      order: 0;
+    }
+  }
+
+  .grid--row-2 {
+    grid-template-rows: minmax(240px, auto) 1fr;
+  }
+}
