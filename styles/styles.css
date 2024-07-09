@@ -473,6 +473,10 @@ img {
   animation: 500ms ease-out forwards icon-grow;
 }
 
+.grid-hidden {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   p {
     margin-bottom: 1rem;
@@ -620,6 +624,9 @@ img {
   .footer-b__footnote {
     margin-top: 1rem;
     padding-top: 1rem;
+  }
+  .grid-hidden {
+    display: grid;
   }
 }
 
