@@ -13,3 +13,7 @@
   @include section.medium;
   @include footer.medium;
 }
+
+@mixin large {
+  @include grid.large;
+}

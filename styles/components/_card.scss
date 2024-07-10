@@ -7,7 +7,7 @@
 
 %grid {
   display: grid;
-  grid-template-rows: minmax(240px, auto) 1fr;
+  grid-template-rows: minmax(232px, auto) 1fr;
 }
 
 .card {
@@ -84,7 +84,7 @@
   }
 
   .card--art--row {
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    grid-template-columns: repeat(2, minmax(232px, 1fr));
     grid-template-rows: unset;
 
     .card__image {

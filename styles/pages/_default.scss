@@ -1,16 +1,28 @@
 @use "../abstracts" as var;
 
-.grid-hidden,
-.flex-hidden {
+.grid-hidden--mobile,
+.grid-hidden--tablet,
+.flex-hidden--mobile,
+.flex-hidden--tablet {
   display: none;
 }
 
 @mixin medium {
-  .grid-hidden {
+  .grid-hidden--mobile {
     display: grid;
   }
 
-  .flex-hidden {
+  .flex-hidden--mobile {
+    display: flex;
+  }
+}
+
+@mixin large {
+  .grid-hidden--tablet {
+    display: grid;
+  }
+
+  .flex-hidden--tablet {
     display: flex;
   }
 }

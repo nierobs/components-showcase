@@ -69,7 +69,7 @@
 
   .footer-b__main {
     @extend %grid-medium;
-    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, minmax(232px, 1fr));
   }
 
   .footer-b__link {

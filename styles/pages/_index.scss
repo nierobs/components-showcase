@@ -3,3 +3,7 @@
 @mixin medium {
   @include default.medium;
 }
+
+@mixin large {
+  @include default.large;
+}

@@ -10,4 +10,7 @@
   @include pages.medium;
 }
 
-@media only screen and (min-width: 1152px) {}
+@media only screen and (min-width: 1152px) {
+  @include pages.large;
+  @include layout.large;
+}
