@@ -362,10 +362,10 @@ img {
   background: hsla(0, 0%, 100%, 0.84);
   left: 50%;
   position: absolute;
+  text-align: center;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  z-index: 1;
 }
 .card--link:hover {
   color: hsl(240, 20%, 16%);
