@@ -580,6 +580,7 @@ img {
   }
   .card--art--row .card__image {
     border-radius: 0.5rem 0 0 0.5rem;
+    height: 100%;
   }
   .card--art--row .card__header,
   .card--art--row .card__footer {
