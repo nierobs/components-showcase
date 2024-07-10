@@ -505,7 +505,8 @@ img {
   animation: 500ms ease-out forwards icon-grow;
 }
 
-.grid-hidden {
+.grid-hidden,
+.flex-hidden {
   display: none;
 }
 
@@ -659,6 +660,9 @@ img {
   }
   .grid-hidden {
     display: grid;
+  }
+  .flex-hidden {
+    display: flex;
   }
 }
 

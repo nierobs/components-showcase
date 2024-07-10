@@ -1,11 +1,16 @@
 @use "../abstracts" as var;
 
-.grid-hidden {
+.grid-hidden,
+.flex-hidden {
   display: none;
 }
 
 @mixin medium {
   .grid-hidden {
     display: grid;
+  }
+
+  .flex-hidden {
+    display: flex;
   }
 }
