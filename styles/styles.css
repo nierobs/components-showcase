@@ -167,6 +167,10 @@ img {
   border-radius: 50%;
 }
 
+.shadow {
+  filter: drop-shadow(0.125rem 0.353553rem 0.5rem rgba(0, 0, 0, 0.12));
+}
+
 .container {
   margin: 0 auto;
   max-width: 1440px;
@@ -340,6 +344,34 @@ img {
 
 .card__image {
   border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card--link {
+  color: hsl(240, 20%, 16%);
+  display: block;
+  position: relative;
+}
+.card--link .card__image {
+  border-radius: 0.5rem;
+}
+.card--link .card__link {
+  color: hsl(210, 80%, 40%);
+  transition: all 250ms ease-out;
+}
+.card--link .card__body {
+  background: hsla(0, 0%, 100%, 0.84);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
+}
+.card--link:hover {
+  color: hsl(240, 20%, 16%);
+}
+.card--link:hover .card__link {
+  color: #2385e7;
 }
 
 .quotation__cite, .quotation__footer, .quotation__body, .quotation {

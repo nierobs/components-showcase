@@ -40,6 +40,39 @@
   border-radius: var.$border-radius var.$border-radius 0 0;
 }
 
+.card--link {
+  color: var.$dark;
+  display: block;
+  position: relative;
+
+  .card__image {
+    border-radius: var.$border-radius;
+  }
+
+  .card__link {
+    color: var.$link;
+    transition: var.$transition;
+  }
+
+  .card__body {
+    background: hsla(0, 0%, 100%, 0.84);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: var.$dark;
+
+    .card__link {
+      color: var.$link-hover;
+    }
+  }
+}
+
 @mixin medium {
   %flex-medium {
     display: var.$gap-medium;
