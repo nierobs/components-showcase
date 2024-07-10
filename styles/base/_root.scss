@@ -113,6 +113,7 @@ em,
 }
 
 .key {
+  @extend .monospace;
   font-stretch: 72%;
   user-select: all;
   word-break: break-all;
