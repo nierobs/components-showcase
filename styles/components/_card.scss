@@ -50,7 +50,7 @@
   }
 
   .card__body {
-    background: hsla(0, 0%, 100%, 0.84);
+    background: hsla(0, 0%, 100%, 1);
     left: 50%;
     position: absolute;
     text-align: center;
@@ -69,7 +69,7 @@
     color: var.$dark;
 
     .card__body {
-      background: hsl(0, 0%, 100%);
+      background: hsla(0, 0%, 100%, 0.84);
     }
 
     .card__link {
