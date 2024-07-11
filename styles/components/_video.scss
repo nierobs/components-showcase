@@ -15,13 +15,13 @@
 }
 
 .video__link {
-  color: var.$link-white;
+  color: var.$white;
   display: block;
   position: relative;
   width: 100%;
 
   &:hover {
-    color: var.$link-white-hover;
+    color: var.$white-hover;
   }
 }
 

@@ -1,3 +1,4 @@
+$bordeaux: hsl(0, 52%, 40%);
 $brand: hsl(150, 44%, 24%);
 $dark: hsl(240, 20%, 16%);
 $gray: hsl(240, 20%, 52%);
@@ -7,9 +8,7 @@ $white: hsl(240, 20%, 100%);
 
 $link: hsl(210, 80%, 40%);
 $link-hover: lighten($link, 12%);
-
-$link-white: hsl(240, 20%, 100%);
-$link-white-hover: darken($link-white, 12%);
+$white-hover: darken($white, 12%);
 
 $button: $brand;
 $button-hover: lighten($button, 12%);
