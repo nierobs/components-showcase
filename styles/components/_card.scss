@@ -49,7 +49,8 @@
   }
 
   .card__body {
-    background: hsl(0 0% 100%);
+    background: var.$button;
+    color: var.$white;
     left: 50%;
     position: absolute;
     text-align: center;
@@ -60,7 +61,7 @@
   }
 
   .card__link {
-    color: var.$link;
+    color: var.$white;
     transition: var.$transition;
   }
 
@@ -72,11 +73,8 @@
     }
 
     .card__body {
-      background: hsl(0 0% 100% / 0.9);
-    }
-
-    .card__link {
-      color: var.$link-hover;
+      background: var.$button-hover;
+      opacity: 0.9;
     }
   }
 }
