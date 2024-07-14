@@ -44,7 +44,7 @@
 
   .card__image {
     border-radius: var.$border-radius;
-    filter: brightness(50%) contrast(90%);
+    filter: brightness(90%) contrast(90%);
     transition: var.$transition;
   }
 
@@ -74,7 +74,6 @@
 
     .card__body {
       background: var.$button-hover;
-      opacity: 0.9;
     }
   }
 }
