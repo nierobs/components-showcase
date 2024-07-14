@@ -1,3 +1,4 @@
+@use "input";
 @use "video";
 @use "button";
 @use "card";
@@ -5,6 +6,7 @@
 @use "animation";
 
 @mixin medium {
+  @include input.medium;
   @include video.medium;
   @include button.medium;
   @include card.medium;
