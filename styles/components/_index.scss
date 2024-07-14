@@ -2,7 +2,6 @@
 @use "button";
 @use "card";
 @use "speech";
-@use "footer";
 @use "animation";
 
 @mixin medium {
@@ -10,6 +9,5 @@
   @include button.medium;
   @include card.medium;
   @include speech.medium;
-  @include footer.medium;
   @include animation.medium;
 }

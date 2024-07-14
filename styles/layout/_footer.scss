@@ -1,27 +1,96 @@
 @use "../abstracts" as var;
 
+%flex {
+  display: flex;
+  gap: 1rem 0.5rem;
+}
+
+%grid {
+  display: grid;
+  gap: 1rem 0.5rem;
+}
+
 .footer {
+  @extend %flex;
   color: var.$white;
+  flex-direction: column;
   padding-bottom: 2rem;
   padding-top: 2rem;
+}
 
-  .footer__icon {
-    margin: 0 0.5rem;
-  }
+.footer__main {
+  @extend %grid;
+}
 
-  .footer__link {
-    color: var.$white;
+.footer__section {
+  text-align: center;
+}
 
-    &:hover {
-      color: var.$white;
-    }
-  }
+.footer__title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: var.$letter-spacing;
+}
 
-  .footer__owner {
-    .footer__link::before {
-      content: ' | '
-    }
+.footer__list {
+  @extend %flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: var.$font-small;
+}
+
+.footer__link {
+  @extend %flex;
+  align-items: center;
+  color: var.$white;
+  gap: 0.25rem;
+
+  &:hover {
+    color: var.$white-hover;
   }
 }
 
-@mixin medium {}
+.footer__footnote {
+  border-top: 1px solid var.$border-color;
+  font-size: var.$font-small;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+
+  .footer__link {
+    display: inline-flex;
+  }
+
+  .footer__link::before {
+    content: ' | '
+  }
+}
+
+@mixin medium {
+  %flex-medium {
+    gap: 1rem;
+  }
+
+  %grid-medium {
+    gap: 1rem;
+  }
+
+  .footer,
+  .footer__list {
+    @extend %flex-medium;
+  }
+
+  .footer__main {
+    @extend %grid-medium;
+    grid-template-columns: repeat(3, minmax(232px, 1fr));
+  }
+
+  .footer__link {
+    gap: 0.5rem;
+  }
+
+  .footer__footnote {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+}
