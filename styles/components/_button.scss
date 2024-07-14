@@ -29,10 +29,10 @@ $lighter: color.scale(var.$golden, $lightness: 10%);
   }
 
   &--golden {
-    background: linear-gradient(114deg, var.$golden 16.666667%, $light 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, $light 61.111111%, $lighter 64.814815%, $light 68.518519%, $lighter 72.222222%, $light 75.925926%, var.$golden 83.333333%) left / 200%;
+    background: linear-gradient(108deg, var.$golden 16.666667%, $light 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, $light 61.111111%, $lighter 64.814815%, $light 68.518519%, $lighter 72.222222%, $light 75.925926%, var.$golden 83.333333%) left / 200%;
 
     &:hover {
-      background: linear-gradient(114deg, var.$golden 16.666667%, $light 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, $light 61.111111%, $lighter 64.814815%, $light 68.518519%, $lighter 72.222222%, $light 75.925926%, var.$golden 83.333333%) right / 200%;
+      background: linear-gradient(108deg, var.$golden 16.666667%, $light 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, $light 61.111111%, $lighter 64.814815%, $light 68.518519%, $lighter 72.222222%, $light 75.925926%, var.$golden 83.333333%) right / 200%;
     }
   }
 }
