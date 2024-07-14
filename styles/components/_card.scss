@@ -1,10 +1,5 @@
 @use "../abstracts" as var;
 
-%flex {
-  display: flex;
-  gap: var.$gap;
-}
-
 %grid {
   display: grid;
   grid-template-rows: minmax(232px, auto) 1fr;
@@ -27,9 +22,7 @@
 }
 
 .card__body {
-  @extend %flex;
-  flex-direction: column;
-  padding: var.$gap;
+  padding: 1rem 0.5rem;
 }
 
 .card--art {
@@ -40,6 +33,10 @@
   border-radius: var.$border-radius var.$border-radius 0 0;
 }
 
+.card__footer {
+  margin-top: 1rem;
+}
+
 .card--link {
   color: var.$dark;
   display: block;
@@ -47,10 +44,12 @@
 
   .card__image {
     border-radius: var.$border-radius;
+    filter: grayscale(100%) brightness(90%);
+    transition: var.$transition;
   }
 
   .card__body {
-    background: hsla(0, 0%, 100%, 1);
+    background: hsl(0 0% 100%);
     left: 50%;
     position: absolute;
     text-align: center;
@@ -68,8 +67,12 @@
   &:hover {
     color: var.$dark;
 
+    .card__image {
+      filter: unset;
+    }
+
     .card__body {
-      background: hsla(0, 0%, 100%, 0.84);
+      background: hsl(0 0% 100% / 0.9);
     }
 
     .card__link {
@@ -79,13 +82,8 @@
 }
 
 @mixin medium {
-  %flex-medium {
-    display: var.$gap-medium;
-  }
-
   .card__body {
-    @extend %flex-medium;
-    padding: var.$gap-medium;
+    padding: 1rem;
   }
 
   .card--art--row {

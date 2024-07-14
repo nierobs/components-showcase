@@ -2,12 +2,12 @@
 
 %flex {
   display: flex;
-  gap: var.$gap;
+  gap: 1rem 0.5rem;
 }
 
 %grid {
   display: grid;
-  gap: var.$gap;
+  gap: 1rem 0.5rem;
 }
 
 .footer-b {
@@ -20,9 +20,7 @@
 }
 
 .footer-b__section {
-  @extend %flex;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
 }
 
 .footer-b__title {
@@ -47,22 +45,21 @@
 .footer-b__footnote {
   border-top: 1px solid var.$border-color;
   font-size: var.$font-small;
-  margin-top: var.$gap;
-  padding-top: var.$gap;
+  margin-top: 1rem;
+  padding-top: 1rem;
   text-align: center;
 }
 
 @mixin medium {
   %flex-medium {
-    gap: var.$gap-medium;
+    gap: 1rem;
   }
 
   %grid-medium {
-    gap: var.$gap-medium;
+    gap: 1rem;
   }
 
   .footer-b,
-  .footer-b__section,
   .footer-b__list {
     @extend %flex-medium;
   }
@@ -77,7 +74,7 @@
   }
 
   .footer-b__footnote {
-    margin-top: var.$gap-medium;
-    padding-top: var.$gap-medium;
+    margin-top: 1rem;
+    padding-top: 1rem;
   }
 }

@@ -1,8 +1,12 @@
+@use "sass:color";
 @use "../abstracts" as var;
+
+$light: color.scale(var.$golden, $lightness: 5%);
+$lighter: color.scale(var.$golden, $lightness: 10%);
 
 %flex {
   display: flex;
-  gap: var.$gap;
+  gap: 1rem 0.5rem;
 }
 
 .button {
@@ -25,17 +29,17 @@
   }
 
   &--golden {
-    background: linear-gradient(105deg, var.$golden 16.666667%, lighten(var.$golden, 4%) 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, lighten(var.$golden, 4%) 61.111111%, lighten(var.$golden, 8%) 64.814815%, lighten(var.$golden, 4%) 68.518519%, lighten(var.$golden, 8%) 72.222222%, lighten(var.$golden, 4%) 75.925926%, var.$golden 83.333333%) left / 200%;
+    background: linear-gradient(114deg, var.$golden 16.666667%, $light 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, $light 61.111111%, $lighter 64.814815%, $light 68.518519%, $lighter 72.222222%, $light 75.925926%, var.$golden 83.333333%) left / 200%;
 
     &:hover {
-      background: linear-gradient(105deg, var.$golden 16.666667%, lighten(var.$golden, 4%) 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, lighten(var.$golden, 4%) 61.111111%, lighten(var.$golden, 8%) 64.814815%, lighten(var.$golden, 4%) 68.518519%, lighten(var.$golden, 8%) 72.222222%, lighten(var.$golden, 4%) 75.925926%, var.$golden 83.333333%) right / 200%;
+      background: linear-gradient(114deg, var.$golden 16.666667%, $light 20.370370%, var.$golden 24.074074%, var.$golden 53.703704%, $light 61.111111%, $lighter 64.814815%, $light 68.518519%, $lighter 72.222222%, $light 75.925926%, var.$golden 83.333333%) right / 200%;
     }
   }
 }
 
 @mixin medium {
   %flex-medium {
-    gap: var.$gap-medium;
+    gap: 1rem;
   }
 
   .button,

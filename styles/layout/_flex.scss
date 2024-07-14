@@ -1,8 +1,6 @@
-@use "../abstracts" as var;
-
 .flex {
   display: flex;
-  gap: var.$gap;
+  gap: 1rem 0.5rem;
 }
 
 .flex--center {
@@ -20,7 +18,7 @@
 
 @mixin medium {
   .flex {
-    gap: var.$gap-medium;
+    gap: 1rem;
   }
 
   .flex--medium--row {

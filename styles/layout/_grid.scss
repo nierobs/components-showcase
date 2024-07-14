@@ -1,13 +1,11 @@
-@use "../abstracts" as var;
-
 .grid {
-  gap: var.$gap;
+  gap: 1rem 0.5rem;
   display: grid;
 }
 
 @mixin medium {
   .grid {
-    gap: var.$gap-medium;
+    gap: 1rem;
   }
 
   .grid--col-2,

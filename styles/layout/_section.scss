@@ -7,7 +7,6 @@
 
 .section__title {
   letter-spacing: var.$letter-spacing;
-  margin-bottom: var.$gap;
   text-align: center;
 }
 
@@ -15,9 +14,5 @@
   .section {
     padding-bottom: 8rem;
     padding-top: 8rem;
-  }
-
-  .section__title {
-    margin-bottom: var.$gap-medium;
   }
 }
