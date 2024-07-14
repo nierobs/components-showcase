@@ -44,7 +44,7 @@
 
   .card__image {
     border-radius: var.$border-radius;
-    filter: grayscale(100%) brightness(90%);
+    filter: brightness(50%) contrast(90%);
     transition: var.$transition;
   }
 
