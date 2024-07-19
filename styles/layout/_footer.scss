@@ -3,12 +3,12 @@
 
 %flex {
   display: flex;
-  gap: 1rem 0.5rem;
+  gap: 1rem;
 }
 
 %grid {
   display: grid;
-  gap: 1rem 0.5rem;
+  gap: 1rem;
 }
 
 .footer {
@@ -28,7 +28,9 @@
 }
 
 .footer__title {
+  font-family: var.$font-family-title;
   font-size: 1rem;
+  font-variant: small-caps;
   font-weight: 700;
   letter-spacing: var.$letter-spacing;
 }
@@ -37,14 +39,14 @@
   @extend %flex;
   align-items: center;
   flex-direction: column;
-  font-size: var.$font-small;
+  font-size: var.$small;
 }
 
 .footer__link {
   @extend %flex;
   align-items: center;
   color: var.$white;
-  gap: 0.25rem;
+  gap: 0.5rem;
 
   &:hover {
     color: var.$white-hover;
@@ -53,7 +55,7 @@
 
 .footer__footnote {
   border-top: 1px solid color.scale(var.$brand, $lightness: -10%);
-  font-size: var.$font-small;
+  font-size: var.$small;
   margin-top: 1rem;
   padding-top: 2rem;
   text-align: center;
@@ -68,25 +70,7 @@
 }
 
 @mixin medium {
-  %flex-medium {
-    gap: 1rem;
-  }
-
-  %grid-medium {
-    gap: 1rem;
-  }
-
-  .footer,
-  .footer__list {
-    @extend %flex-medium;
-  }
-
   .footer__main {
-    @extend %grid-medium;
-    grid-template-columns: repeat(3, minmax(232px, 1fr));
-  }
-
-  .footer__link {
-    gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

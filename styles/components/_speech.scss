@@ -2,7 +2,7 @@
 
 %flex {
   display: flex;
-  gap: 1rem 0.5rem;
+  gap: 1rem;
 }
 
 .speech {
@@ -15,6 +15,7 @@
 }
 
 .speech__image {
+  background: var.$border-color;
   border: 1px solid var.$border-color;
   border-radius: 50%;
   margin: 0 auto;
@@ -29,7 +30,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin-top: 1rem;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   z-index: 1;
 }
 
@@ -55,7 +56,7 @@
 .speech__footer {
   @extend %flex;
   flex-wrap: wrap;
-  font-size: var.$font-small;
+  font-size: var.$small;
 }
 
 .speech__author {
@@ -65,33 +66,26 @@
 }
 
 .speech__icon {
-  height: var.$font-small;
+  height: var.$small;
 }
 
 .speech__cite {
   @extend %flex;
   align-items: center;
   color: var.$gray;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 @mixin medium {
-  %flex-medium {
-    gap: 1rem;
-  }
-
   .speech {
-    @extend %flex-medium;
     align-items: flex-start;
     flex-direction: row;
   }
 
   .speech__body {
-    @extend %flex-medium;
     align-self: stretch;
     margin-left: 1rem;
     margin-top: unset;
-    padding: 1rem;
   }
 
   .speech__arrow,
@@ -104,14 +98,6 @@
     left: calc(100% + 1rem);
     top: 50%;
     transform: translateY(-50%);
-  }
-
-  .speech__footer {
-    @extend %flex-medium;
-  }
-
-  .speech__cite {
-    gap: 0.5rem;
   }
 
   .speech--reverse {

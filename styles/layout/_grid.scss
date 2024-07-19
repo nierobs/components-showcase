@@ -1,31 +1,22 @@
 .grid {
-  gap: 1rem 0.5rem;
   display: grid;
+  gap: 1rem;
 }
 
 @mixin medium {
-  .grid {
-    gap: 1rem;
-  }
-
-  .grid--col-2,
-  .grid--col-3 {
-    grid-template-columns: repeat(2, minmax(232px, 1fr));
-  }
-
-  .grid--col-2--reverse {
-    & > *:first-child {
-      order: 1;
-    }
-  }
-
-  .grid--row-2 {
-    grid-template-rows: minmax(232px, auto) 1fr;
+  .grid--2x,
+  .grid--3x,
+  .grid--4x {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @mixin large {
-  .grid--col-3 {
-    grid-template-columns: repeat(3, minmax(232px, 1fr));
+  .grid--3x {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4x {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

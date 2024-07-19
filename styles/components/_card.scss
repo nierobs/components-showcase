@@ -2,7 +2,7 @@
 
 %grid {
   display: grid;
-  grid-template-rows: minmax(232px, auto) 1fr;
+  grid-template-rows: minmax(1rem, auto) 1fr;
 }
 
 .card {
@@ -16,13 +16,8 @@
   text-align: center;
 }
 
-.card__title {
-  font-size: var.$h3;
-  font-weight: 700;
-}
-
 .card__body {
-  padding: 1rem 0.5rem;
+  padding: 1rem;
 }
 
 .card--art {
@@ -30,6 +25,7 @@
 }
 
 .card__image {
+  background: var.$border-color;
   border-radius: var.$border-radius var.$border-radius 0 0;
 }
 
@@ -84,7 +80,7 @@
   }
 
   .card--art--row {
-    grid-template-columns: repeat(2, minmax(232px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: unset;
 
     .card__image {

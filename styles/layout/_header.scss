@@ -14,9 +14,7 @@
   }
 
   .header__icon {
-    height: var.$h3;
+    height: var.$title-small;
     width: auto;
   }
 }
-
-@mixin medium {}

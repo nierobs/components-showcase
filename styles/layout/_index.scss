@@ -3,14 +3,13 @@
 @use "flex";
 @use "header";
 @use "section";
+@use "cta";
 @use "footer";
 
 @mixin medium {
-  @include container.medium;
   @include grid.medium;
-  @include flex.medium;
-  @include header.medium;
   @include section.medium;
+  @include cta.medium;
   @include footer.medium;
 }
 

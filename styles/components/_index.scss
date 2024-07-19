@@ -6,10 +6,9 @@
 @use "animation";
 
 @mixin medium {
-  @include input.medium;
-  @include video.medium;
   @include button.medium;
   @include card.medium;
   @include speech.medium;
-  @include animation.medium;
 }
+
+@mixin large {}

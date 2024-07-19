@@ -1,6 +1,6 @@
 .flex {
   display: flex;
-  gap: 1rem 0.5rem;
+  gap: 1rem;
 }
 
 .flex--center {
@@ -8,24 +8,10 @@
   justify-content: center;
 }
 
-.flex--col {
-  flex-direction: column;
-}
-
 .flex--wrap {
   flex-wrap: wrap;
 }
 
-@mixin medium {
-  .flex {
-    gap: 1rem;
-  }
-
-  .flex--medium--row {
-    flex-direction: row;
-  }
-
-  .flex--medium--reverse {
-    flex-direction: row-reverse;
-  }
+.flex--y {
+  flex-direction: column;
 }

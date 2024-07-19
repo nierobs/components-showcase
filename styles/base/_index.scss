@@ -1,2 +1,8 @@
-// @forward "fonts";
+@forward "fonts";
 @use "root";
+
+@mixin medium {
+  @include root.medium;
+}
+
+@mixin large {}
