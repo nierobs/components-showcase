@@ -144,6 +144,7 @@ svg {
 img {
   display: block;
   height: auto;
+  image-rendering: smooth;
   object-fit: cover;
   width: 100%;
 }
