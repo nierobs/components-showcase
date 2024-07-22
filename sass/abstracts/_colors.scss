@@ -26,7 +26,9 @@ $bordeaux: hsl(0 var.$pct-7 var.$pct-5);
 $brand: hsl(150 var.$pct-5 var.$pct-3);
 $golden: hsl(42 var.$pct-9 var.$pct-5);
 
-$link: hsl(222 var.$pct-10 var.$pct-5);
+@debug var.$pct-10;
+
+$link: hsl(222 var.$pct-11 var.$pct-5);
 $link-hover: color.adjust($link, $lightness: var.$pct-1);
 
 $link-light: $light3;
