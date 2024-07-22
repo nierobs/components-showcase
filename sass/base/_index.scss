@@ -1,8 +1,9 @@
-@forward "fonts";
-@use "root";
+@use "fonts";
+@use "reset";
+@use "color";
+@use "typography";
+@use "images";
 
 @mixin medium {
-  @include root.medium;
+  @include typography.medium;
 }
-
-@mixin large {}

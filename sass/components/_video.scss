@@ -1,11 +1,11 @@
 @use "../abstracts" as var;
 
 .video {
-  background: url("../images/video_cover.jpg") center / cover no-repeat var.$light !important;
+  background: url("../images/video_cover.jpg") center / cover no-repeat transparent !important;
 }
 
 .video__cover {
-  background: hsl(0 0% 0% / 0.9);
+  background: hsl(0 0% 0% / 91.666667%);
 }
 
 .video__image {
@@ -15,13 +15,13 @@
 }
 
 .video__link {
-  color: var.$white;
+  color: var.$link-light;
   display: block;
   position: relative;
   width: 100%;
 
   &:hover {
-    color: var.$white-hover;
+    color: var.$link-light-hover;
   }
 }
 

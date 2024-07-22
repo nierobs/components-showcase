@@ -13,7 +13,7 @@
 
 .footer {
   @extend %flex;
-  color: var.$white;
+  color: var.$light3;
   flex-direction: column;
   padding-bottom: 2rem;
   padding-top: 2rem;
@@ -45,11 +45,11 @@
 .footer__link {
   @extend %flex;
   align-items: center;
-  color: var.$white;
+  color: var.$link-light;
   gap: 0.5rem;
 
   &:hover {
-    color: var.$white-hover;
+    color: var.$link-light-hover;
   }
 }
 

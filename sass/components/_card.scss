@@ -6,7 +6,7 @@
 }
 
 .card {
-  background: var.$white;
+  background: var.$light3;
   border-radius: var.$border-radius;
   filter: var.$drop-shadow;
 }
@@ -34,19 +34,19 @@
 }
 
 .card--link {
-  color: var.$dark;
+  color: var.$dark3;
   display: block;
   position: relative;
 
   .card__image {
     border-radius: var.$border-radius;
-    filter: brightness(90%);
+    filter: brightness(91.666667%);
     transition: var.$transition;
   }
 
   .card__body {
     background: var.$button;
-    color: var.$white;
+    color: var.$light3;
     left: 50%;
     position: absolute;
     text-align: center;
@@ -57,12 +57,12 @@
   }
 
   .card__link {
-    color: var.$white;
+    color: var.$light3;
     transition: var.$transition;
   }
 
   &:hover {
-    color: var.$dark;
+    color: var.$dark3;
 
     .card__image {
       filter: unset;

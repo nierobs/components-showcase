@@ -12,14 +12,14 @@
 }
 
 .input__field {
-  background: var.$white;
+  background: var.$light3;
   border: 1px solid var.$border-color;
   border-radius: var.$border-radius;
   outline: 0;
   padding: 1rem;
 
   &::placeholder {
-    color: var.$gray;
+    color: var.$darkgray1;
     opacity: 1;
   }
 }

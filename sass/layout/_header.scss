@@ -1,15 +1,15 @@
 @use "../abstracts" as var;
 
 .header {
-  color: var.$white;
+  color: var.$light3;
   padding-bottom: 2rem;
   padding-top: 2rem;
 
   .header__link {
-    color: var.$white;
+    color: var.$link-light;
 
     &:hover {
-      color: var.$white-hover;
+      color: var.$link-light-hover;
     }
   }
 
